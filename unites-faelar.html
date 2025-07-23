@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Unités de Faelar Mad'doron-Glan</title>
-  <style>
+  <link rel="stylesheet" href="style.css" />
+  <!-- <style>
     @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
 
     body {
@@ -146,69 +147,21 @@
       font-weight: bold;
       cursor: pointer;
     }
-  </style>
+  </style> -->
 </head>
 <body>
-  <header>
-    <!-- <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2021/02/Campaign-10.jpg?q=50&fit=crop&w=1140&h=&dpr=1.5" alt="Logo The 9th Age" /> -->
-    <h1>I dhaedol dagor - Campagne 9eme âge</h1>
-  </header>
-
-  <nav>
-    <div class="dropdown">
-      <button class="dropbtn">Carte de Campagne</button>
-      <div class="dropdown-content">
-        <a href="#">Vue Générale</a>
-        <a href="#">Zones Stratégiques</a>
-        <a href="#">Progression</a>
-      </div>
-    </div>
-
-    <div class="dropdown">
-      <button class="dropbtn">Ost de Faelar Mad'doron-Glan</button>
-      <div class="dropdown-content">
-        <a href="unites-faelar.html">Unités</a>
-        <a href="#">Hauts Faits</a>
-        <a href="#">Général</a>
-      </div>
-    </div>
-
-    <div class="dropdown">
-      <button class="dropbtn">Ost de Cyllis Finrod Doron-Glan</button>
-      <div class="dropdown-content">
-        <a href="unites-cyllis.html">Unités</a>
-        <a href="#">Hauts Faits</a>
-        <a href="#">Général</a>
-      </div>
-    </div>
- <div class="dropdown">
-      <button class="dropbtn">La horde de Démétria</button>
-      <div class="dropdown-content">
-        <a href="unites-demetria.html">La horde des Loups sombres</a>
-        <a href="#">Les orques de la main tranché</a>
-        <a href="#">Les osts démoniques.</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <button class="dropbtn">Artefacts</button>
-      <div class="dropdown-content">
-        <a href="#">Liste des Artefacts</a>
-        <a href="#">Artefacts Uniques</a>
-        <a href="#">Règles Spéciales</a>
-      </div>
-    </div>
-  </nav>
+  <div id="header-placeholder"></div>
   <main>
     <h1>Unités de Faelar Mad'doron-Glan</h1>
 <div class="units-grid">
     <div class="unit" data-unit="faelar">
-      <img src="/image/Faelor.jpg" alt="Faelar, Général de l'Ost Sylvain" />
+      <img src="image/Faelor.jpg" alt="Faelar, Général de l'Ost Sylvain" />
       <p>Faelar, Général de l'Ost Sylvain</p>
     </div>
 
     <div class="unit" data-unit="mornaglade">
       <img src="https://www.honga.net/totalwar/warhammer/images/warhammer/units/infopics/wh_dlc05_wef_dryads.png" alt="Les esprits de Mornaglade" />
-      <p>Les esprits de Mornaglade</p>
+      <p>Les esprits de Mornaglade, gardiens des forêts sacrées.</p>
     </div>
 </div>
   </main>
@@ -264,6 +217,14 @@
         modal.style.display = "none";
       }
     };
+  </script>
+   <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      })
+      .catch(error => console.error('Erreur chargement header:', error));
   </script>
 </body>
 </html>
