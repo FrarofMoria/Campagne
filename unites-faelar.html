@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unités de Faelar Mad'doron-Glan</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+
+    body {
+      font-family: 'Garamond', serif;
+      background: url('https://www.transparenttextures.com/patterns/parchment.png');
+      color:  #2e1a0f;
+      margin: 0;
+      padding: 0;
+    }
+  header {
+      background: url('image/header.png')no-repeat center center;
+        background-size: cover;
+      color: #ffffff;
+      padding: 300px;
+      text-align: center;
+      font-family: 'Cinzel', serif;
+      letter-spacing: 1px;
+      border-bottom: 5px solid #8b5e3c;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #5a3e2b;
+      flex-wrap: wrap;
+      border-bottom: 3px solid #3b2415;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropbtn {
+      background-color: #5a3e2b;
+      color: #f0e6d2;
+      padding: 14px 20px;
+      font-size: 16px;
+      font-family: 'Cinzel', serif;
+      border: none;
+      cursor: pointer;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fcf5e5;
+      min-width: 200px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
+      z-index: 1;
+    }
+    .dropdown-content a {
+      color: #2e1a0f;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      font-family: 'Garamond', serif;
+    }
+    .dropdown-content a:hover {
+      background-color: #e1d6b8;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown:hover .dropbtn {
+      background-color: #7a553c;
+    }
+
+    main {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    h1 {
+      font-family: 'Cinzel', serif;
+      margin-bottom: 40px;
+    }
+
+    .unit {
+      max-width: 200px;
+      margin: 20px auto;
+      text-align: center;
+      background-color: #fcf5e5;
+      padding: 20px;
+      border: 2px solid #5a3e2b;
+      border-radius: 10px;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+      cursor: pointer;
+    }
+ .units-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 900px;   /* fixe une largeur max pour la grille */
+  margin: 0 auto;     /* centre horizontalement */
+}
+    .unit img {
+      max-height: 200px;
+      width: auto;
+      border-radius: 8px;
+      border: 1px solid #8b5e3c;
+      display: block;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+    .unit p {
+      font-size: 18px;
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    /* Modal styles */
+    .modal {
+      display: none; 
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.6);
+    }
+
+    .modal-content {
+      background-color: #fcf5e5;
+      margin: 10% auto;
+      padding: 30px;
+      border: 2px solid #5a3e2b;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 12px;
+      font-family: 'Garamond', serif;
+      text-align: center;
+      position: relative;
+    }
+
+    .close {
+      color: #5a3e2b;
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2021/02/Campaign-10.jpg?q=50&fit=crop&w=1140&h=&dpr=1.5" alt="Logo The 9th Age" /> -->
+    <h1>I dhaedol dagor - Campagne 9eme âge</h1>
+  </header>
+
+  <nav>
+    <div class="dropdown">
+      <button class="dropbtn">Carte de Campagne</button>
+      <div class="dropdown-content">
+        <a href="#">Vue Générale</a>
+        <a href="#">Zones Stratégiques</a>
+        <a href="#">Progression</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Ost de Faelar Mad'doron-Glan</button>
+      <div class="dropdown-content">
+        <a href="unites-faelar.html">Unités</a>
+        <a href="#">Hauts Faits</a>
+        <a href="#">Général</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Ost de Cyllis Finrod Doron-Glan</button>
+      <div class="dropdown-content">
+        <a href="unites-cyllis.html">Unités</a>
+        <a href="#">Hauts Faits</a>
+        <a href="#">Général</a>
+      </div>
+    </div>
+ <div class="dropdown">
+      <button class="dropbtn">La horde de Démétria</button>
+      <div class="dropdown-content">
+        <a href="unites-demetria.html">La horde des Loups sombres</a>
+        <a href="#">Les orques de la main tranché</a>
+        <a href="#">Les osts démoniques.</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Artefacts</button>
+      <div class="dropdown-content">
+        <a href="#">Liste des Artefacts</a>
+        <a href="#">Artefacts Uniques</a>
+        <a href="#">Règles Spéciales</a>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <h1>Unités de Faelar Mad'doron-Glan</h1>
+<div class="units-grid">
+    <div class="unit" data-unit="faelar">
+      <img src="https://static.wikia.nocookie.net/wow/images/9/9f/Cenarius_by_nimao-d4t8uas.jpg/revision/latest?cb=20150815145602&path-prefix=fr" alt="Faelar, Général de l'Ost Sylvain" />
+      <p>Faelar, Général de l'Ost Sylvain</p>
+    </div>
+
+    <div class="unit" data-unit="mornaglade">
+      <img src="https://www.honga.net/totalwar/warhammer/images/warhammer/units/infopics/wh_dlc05_wef_dryads.png" alt="Les esprits de Mornaglade" />
+      <p>Les esprits de Mornaglade, gardiens des forêts sacrées.</p>
+    </div>
+</div>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modal-title">Titre de l'unité</h2>
+      <p id="modal-text">Texte descriptif ici...</p>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById("modal");
+    const modalTitle = document.getElementById("modal-title");
+    const modalText = document.getElementById("modal-text");
+    const closeModal = document.querySelector(".close");
+
+    // Données des unités
+    const unitData = {
+      "faelar": {
+        title: "Faelar, Général de l'Ost Sylvain",
+        text: "Ancien protecteur de Mornaglade, Faelar mène les siens avec sagesse et puissance."
+      },
+      "mornaglade": {
+        title: "Les Esprits de Mornaglade",
+        text: "Entités mystiques nées de la forêt, gardiennes des secrets anciens."
+      },
+     
+    };
+
+    // Ouvrir modal au clic sur une unité
+    document.querySelectorAll(".unit").forEach(unit => {
+      unit.addEventListener("click", () => {
+        const key = unit.getAttribute("data-unit");
+        if (unitData[key]) {
+          modalTitle.textContent = unitData[key].title;
+          modalText.textContent = unitData[key].text;
+          modal.style.display = "block";
+        }
+      });
+    });
+
+    // Fermer modal
+    closeModal.onclick = () => {
+      modal.style.display = "none";
+    };
+
+    // Fermer modal si clic à l'extérieur
+    window.onclick = (event) => {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+</body>
+</html>
