@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
 
 body {
+  background-image: url('/image/bod.jpg');
+  background-size: cover;          /* couvre toute la page */
+  background-repeat: no-repeat;    /* pas de répétition */
+  background-position: center;     /* centrer l'image */
+  background-attachment: fixed;    /* fixe l'image en fond lors du scroll */
   font-family: 'Garamond', serif;
-  background: url('https://www.transparenttextures.com/patterns/parchment.png');
-  color:  #2e1a0f;
+  color: #5e3f27;
   margin: 0;
   padding: 0;
 }
@@ -178,17 +182,7 @@ main > img {
   margin: 20px auto;
   display: block;
 }
-body {
-  background-image: url('/image/bod.jpg');
-  background-size: cover;          /* couvre toute la page */
-  background-repeat: no-repeat;    /* pas de répétition */
-  background-position: center;     /* centrer l'image */
-  background-attachment: fixed;    /* fixe l'image en fond lors du scroll */
-  font-family: 'Garamond', serif;
-  color: #5e3f27;
-  margin: 0;
-  padding: 0;
-}
+
 #book-container {
   display: flex;
   justify-content: center;
