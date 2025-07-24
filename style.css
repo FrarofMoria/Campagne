@@ -3,7 +3,7 @@
 body {
   font-family: 'Garamond', serif;
   background: url('https://www.transparenttextures.com/patterns/parchment.png');
-  color:  #5e3f27;
+  color:  #2e1a0f;
   margin: 0;
   padding: 0;
 }
@@ -185,7 +185,7 @@ body {
   background-position: center;     /* centrer l'image */
   background-attachment: fixed;    /* fixe l'image en fond lors du scroll */
   font-family: 'Garamond', serif;
-  color: #fdf9f6;
+  color: #5e3f27;
   margin: 0;
   padding: 0;
 }
