@@ -185,9 +185,34 @@ body {
   background-position: center;     /* centrer l'image */
   background-attachment: fixed;    /* fixe l'image en fond lors du scroll */
   font-family: 'Garamond', serif;
-  color: #2e1a0f;
+  color: #fdf9f6;
   margin: 0;
   padding: 0;
+}
+#book-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.page {
+  background-color: #fcf5e5;
+  padding: 30px;
+  font-size: 18px;
+  line-height: 1.6;
+  font-family: 'Garamond', serif;
+  color: #2e1a0f;
+  background-image: url('image/parchment-light.jpg');
+  background-size: cover;
+  border: 2px solid #5a3e2b;
+  border-radius: 10px;
+}
+
+.page img {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 8px;
 }
 /* Modal styles */
 .modal {
