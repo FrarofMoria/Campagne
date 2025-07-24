@@ -178,7 +178,17 @@ main > img {
   margin: 20px auto;
   display: block;
 }
-
+body {
+  background-image: url('/image/bod.jpg');
+  background-size: cover;          /* couvre toute la page */
+  background-repeat: no-repeat;    /* pas de répétition */
+  background-position: center;     /* centrer l'image */
+  background-attachment: fixed;    /* fixe l'image en fond lors du scroll */
+  font-family: 'Garamond', serif;
+  color: #2e1a0f;
+  margin: 0;
+  padding: 0;
+}
 /* Modal styles */
 .modal {
   display: none; 

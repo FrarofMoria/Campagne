@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Artéfacts</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <main>
+    
+<div class="units-grid">
+    <div class="unit" data-unit="La larme D'Oltiken">
+      <img src="/image/Larme.png" alt="La larme D'Oltiken" />
+      <p>La larme D'Oltiken</p>
+    </div>
+</div>
+   
+
+    
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modal-title">Titre de l'unité</h2>
+      <p id="modal-text">Texte descriptif ici...</p>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById("modal");
+    const modalTitle = document.getElementById("modal-title");
+    const modalText = document.getElementById("modal-text");
+    const closeModal = document.querySelector(".close");
+
+    // Données des unités
+    const unitData = {
+      "La larme D'Oltiken": {
+        title: "La larme D'Oltiken",
+        text: "Un crystal vert renfermant une magique des elfes du premier âge. Interdit par les sages à cause de sa grande puissance dévastatrice. Peu de chose est connu de ce crystal, même des elfes de cet âge"
+      },
+    };
+
+    // Ouvrir modal au clic sur une unité
+    document.querySelectorAll(".unit").forEach(unit => {
+      unit.addEventListener("click", () => {
+        const key = unit.getAttribute("data-unit");
+        if (unitData[key]) {
+          modalTitle.textContent = unitData[key].title;
+          modalText.textContent = unitData[key].text;
+          modal.style.display = "block";
+        }
+      });
+    });
+
+    // Fermer modal
+    closeModal.onclick = () => {
+      modal.style.display = "none";
+    };
+
+    // Fermer modal si clic à l'extérieur
+    window.onclick = (event) => {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+   <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      })
+      .catch(error => console.error('Erreur chargement header:', error));
+  </script>
+</body>
+</html>
