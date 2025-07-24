@@ -77,6 +77,39 @@ nav {
   background-color: #7a553c;
 }
 
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > a {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #2e1a0f;
+  background-color: transparent;
+  font-family: 'Garamond', serif;
+}
+
+.dropdown-submenu > a:hover {
+  background-color: #e1d6b8;
+}
+
+.submenu-content {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background-color: #fcf5e5;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
+  border: 1px solid #5a3e2b;
+  z-index: 1001;
+}
+
+.dropdown-submenu:hover .submenu-content {
+  display: block;
+}
+
 main {
   padding: 60px 20px;
   text-align: center;
@@ -121,6 +154,21 @@ p {
   border-radius: 10px;
   margin-bottom: 15px;
   object-fit: contain;
+}
+.unit .image {
+  flex: 1 1 300px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center; /* centre les images si elles ne remplissent pas toute la ligne */
+}
+
+.unit .image img {
+  width: calc(50% - 10px); /* deux images par ligne avec un espace de 10px */
+  height: 200px;
+  object-fit: cover;
+  border: 3px solid #5a3e2b;
+  border-radius: 10px;
 }
 
 main > img {

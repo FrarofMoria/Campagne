@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rapport de Bataille 1 - I dhaedol dagor</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+
+    body {
+      font-family: 'Garamond', serif;
+      background: url('https://www.transparenttextures.com/patterns/parchment.png');
+      color:  #2e1a0f;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Cinzel', serif;
+      margin-bottom: 20px;
+      color: #5a3e2b;
+    }
+
+    p {
+      font-size: 18px;
+      max-width: 800px;
+      line-height: 1.5;
+    }
+
+    .unit {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+      border: 2px solid #5a3e2b;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #fcf5e5;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .unit .text {
+      flex: 1 1 300px;
+    }
+
+    .unit .images {
+      flex: 1 1 300px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .unit .images img {
+      width: calc(50% - 10px);
+      height: 200px;
+      object-fit: cover;
+      border: 3px solid #5a3e2b;
+      border-radius: 10px;
+      box-shadow: 1px 1px 4px rgba(0,0,0,0.15);
+    }
+
+    /* Responsive : sur écrans plus petits, texte puis images en colonne */
+    @media (max-width: 700px) {
+      .unit {
+        flex-direction: column;
+      }
+      .unit .images img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+<div id="header-placeholder"></div>
+  <h1>La bataille de la larme Oltiken</h1>
+
+  <section class="unit">
+    <div class="text">
+      <h2>La bataille de la larme Oltiken</h2>
+      <p>
+        La date s’est effacée dans les brumes des âges, 
+        et nul, parmi les sages ni parmi les rois, 
+        ne sut jamais comment les Elfes vinrent à perdre l’un de leurs trésors les plus sacrés. 
+        Il est seulement dit que Démétria, au cœur d’ombre et de fer, s’en empara, osant s’aventurer jusqu’aux profondeurs
+         interdites de la Forêt Sylvaine.
+      </p>
+    </div>
+    <div class="images">
+      <img src="image/oltiken_1.jpg" alt="Bataille épique entre les deux armées" />
+      <img src="image/oltiken_2.jpg" alt="Bataille épique entre les deux armées" />
+    </div>
+  </section>
+
+  <section class="unit">
+    <div class="text">
+      <h3>Ordre de bataille</h3>
+      <p>Ce jour-là, maintes vies elfiques furent englouties dans le sang et les flammes, mais non sans éclats dignes de mémoire. Car ce fut alors que les sinistres Massacreurs d’Ulfart, dont le nom seul glaçait le cœur des plus vaillants depuis une année entière de carnages, 
+        périrent tous, consumés par la colère des esprits sylvestres, qui déchaînèrent contre eux la vengeance de la forêt vivante.
+      </p>
+    </div>
+    <div class="images">
+      <img src="image/oltiken_3.jpg" alt="Bataille épique entre les deux armées" />
+      <img src="image/oltiken_4.jpg" alt="Bataille épique entre les deux armées" />
+    </div>
+  </section>
+
+  <section class="unit">
+    <div class="text" style="flex: 1 1 100%;">
+      <h3>Résumé</h3>
+      <p>
+        Les chroniques des anciens n’en disent point la fin ; et l’ombre plane encore sur le terme de cette bataille. Pourtant, une chose est certaine : Démétria s’évanouit dans les profondeurs du bois, et malgré la sagesse des rois et l’inlassable traque des Elfes, elle demeura introuvable.
+        <br><br>
+        Mais son ost ne s’éteignit point. Comme un feu rampant dans la lande, il ravagea campagnes et hameaux, assiégea cités et châteaux. Aucun peuple — ni Nains des montagnes, ni Elfes des bois, ni Hommes des plaines — ne fut épargné. Quel dessein ténébreux guidait Démétria ? Nul ne le sut jamais. Pourtant, dès ce jour, les langues du Noir Parler murmurèrent son nom funeste :
+        <br><br>
+        <em>Exil’ar’anarcht,<br>
+        Le Fléau des Elfes.</em>
+      </p>
+    </div>
+  </section>
+
+</body>
+</html>
