@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>La hordes des loups sombres</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <main>
+    <h1></h1>
+ <div class="units-grid">
+    <div class="unit" data-unit="Les Loups Sombres">
+      <img src="image/massacreur.jpg" alt="Les massacreurs d'd’Ulfart" />
+      <p>Guerriers extrêment puissant et béni des dieux sombres, ont sémé la mort et la désolation durant le ravage du Sunland.
+        Tuer par les troupes de Faelor lors de la bataille : La larme d'Oltiken.
+      </p>
+    </div>
+    <div class="unit" data-unit="Les Loups Sombres">
+      <img src="image/guerrier.jpg" alt="La fierté des désolation nordique" />
+      <p>Une bande de guerrier du chaos vétéran de multiples batailles. Bien armuré et équipé grâce à un accord très bien négocié par Démétria</p>
+    </div>
+    <div class="unit" data-unit="Les Loups Sombres">
+      <img src="image/fouldr.png" alt="Sorcier des dieux sombres" />
+      <p>On ne connaît peut de chose de ce Sorcier qui a fait son apparation lors de la bataille de la larme. Personne ne l'avait apperçu avant.</p>
+    </div>
+     <div class="unit" data-unit="Les Loups Sombres">
+      <img src="image/chevalierC.jpg" alt="Les lames de l'orgueil" />
+      <p>Une bande de chevalier, qui n'a jamais fuit sur le champ de batailles. Connut pour leur orgueil et leur violence au combat. Ne font preuves d'aucune pitié
+
+      </p>
+      </div>
+      <div class="unit" data-unit="Les Loups Sombres">
+      <img src="image/barbare.jpg" alt="La tribut des loups sombres" />
+      <p>Les hommes et les femmes qui doivent faire leurs preuves au combat. Vénèrent Démétria, ils sont tous jeunes et vigoureux comme peut l'être
+        tout les hommes de ces contrées peu hospitalière.
+      </p>
+    </div>
+       <div class="unit" data-unit="Les Loups Sombres">
+      <img src="image/eluC.jpg" alt="Les élus" />
+      <p>Les guerriers les plus puissants de la horde venu du nord.
+      </p>
+    </div>
+</div> 
+   
+
+    
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modal-title">Titre de l'unité</h2>
+      <p id="modal-text">Texte descriptif ici...</p>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById("modal");
+    const modalTitle = document.getElementById("modal-title");
+    const modalText = document.getElementById("modal-text");
+    const closeModal = document.querySelector(".close");
+
+    // Données des unités
+    const unitData = {
+      "Cyllis": {
+        title: "Cyllis, Général de l'Ost Sylvain",
+        text: "Général Haut elfe envoyé pour défendre les elfes sylvains"
+      },
+    };
+
+    // Ouvrir modal au clic sur une unité
+    document.querySelectorAll(".unit").forEach(unit => {
+      unit.addEventListener("click", () => {
+        const key = unit.getAttribute("data-unit");
+        if (unitData[key]) {
+          modalTitle.textContent = unitData[key].title;
+          modalText.textContent = unitData[key].text;
+          modal.style.display = "block";
+        }
+      });
+    });
+
+    // Fermer modal
+    closeModal.onclick = () => {
+      modal.style.display = "none";
+    };
+
+    // Fermer modal si clic à l'extérieur
+    window.onclick = (event) => {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+   <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      })
+      .catch(error => console.error('Erreur chargement header:', error));
+  </script>
+</body>
+</html>

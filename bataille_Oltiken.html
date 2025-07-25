@@ -22,6 +22,12 @@
   <!-- Pages cachées pour le flipbook -->
   <div style="display: none;">
     <div class="page-content">
+        <div class="page cover-page">
+    <h1>I dhaedol dagor </h1>
+    <h2>La bataille de la Larme d'Oltiken</h2>
+    <img src="image/larme_11.png" alt="Couverture" />
+  </div>
+</div>
       <div class="page">
         <h2>La larme d’Oltiken</h2>
         <p>
@@ -60,19 +66,28 @@ Le Fléau des Elfes.</h1>
   </div>
 
   <!-- Scripts -->
-  <script src="pageflip/page-flip.browser.js"></script>
-  <script>
-    const flipbook = new St.PageFlip(document.getElementById("flipbook"), {
-      width: 600,
-      height: 800,
-      size: "fixed",
-      maxShadowOpacity: 0.5,
-      showCover: true,
-      mobileScrollSupport: false
-    });
+ <script src="pageflip/page-flip.browser.js"></script>
+<script src="pageflip/page-flip.browser.js"></script>
+<script>
+  const isMobile = window.innerWidth <= 600;
 
-    flipbook.loadFromHTML(document.querySelectorAll(".page-content"));
-  </script>
+  const flipbook = new St.PageFlip(document.getElementById("flipbook"), {
+    width: 600,
+    height: 800,
+    size: isMobile ? "stretch" : "fixed",
+    minWidth: 315,
+    maxWidth: 1000,
+    minHeight: 400,
+    maxHeight: 1350,
+    showCover: true,
+    usePortrait: isMobile,
+    mobileScrollSupport: false,
+    maxShadowOpacity: 0.3,
+    autoSize: true
+  });
+
+  flipbook.loadFromHTML(document.querySelectorAll(".page-content"));
+</script>
 
   <!-- Chargement du header -->
   <script>
