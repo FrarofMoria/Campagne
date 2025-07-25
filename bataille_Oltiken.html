@@ -16,9 +16,8 @@
     </div>
   </main>
 
-  <!-- Pages pour le flipbook (cachées mais bien structurées) -->
+  <!-- Pages cachées pour le flipbook -->
   <div style="display: none;">
-
     <div class="page-content">
       <div class="page cover-page">
         <h1>I dhaedol dagor</h1>
@@ -31,8 +30,7 @@
       <div class="page">
         <h2>La larme d’Oltiken</h2>
         <p>
-         La date s’est effacée dans les brumes des âges, et nul, parmi les sages ni parmi les rois, ne sut jamais comment les Elfes vinrent à perdre l’un de leurs trésors les plus sacrés. 
-         Il est seulement dit que Démétria, au cœur d’ombre et de fer, s’en empara, osant s’aventurer jusqu’aux profondeurs interdites de la Forêt Sylvaine
+          La date s’est effacée dans les brumes des âges, et nul, parmi les sages ni parmi les rois, ne sut jamais comment les Elfes vinrent à perdre l’un de leurs trésors les plus sacrés. Il est seulement dit que Démétria, au cœur d’ombre et de fer, s’en empara, osant s’aventurer jusqu’aux profondeurs interdites de la Forêt Sylvaine.
         </p>
         <img src="image/oltiken_1.jpg" alt="La larme" />
       </div>
@@ -41,8 +39,7 @@
     <div class="page-content">
       <div class="page">
         <p>
-        Ce jour-là, maintes vies elfiques furent englouties dans le sang et les flammes, mais non sans éclats dignes de mémoire. Car ce fut alors que les sinistres Massacreurs d’Ulfart, dont le nom seul glaçait le cœur des plus vaillants depuis une année entière de carnages, périrent tous, 
-        consumés par la colère des esprits sylvestres, qui déchaînèrent contre eux la vengeance de la forêt vivante.
+          Ce jour-là, maintes vies elfiques furent englouties dans le sang et les flammes, mais non sans éclats dignes de mémoire. Car ce fut alors que les sinistres Massacreurs d’Ulfart, dont le nom seul glaçait le cœur des plus vaillants depuis une année entière de carnages, périrent tous, consumés par la colère des esprits sylvestres, qui déchaînèrent contre eux la vengeance de la forêt vivante.
         </p>
         <img src="image/oltiken_3.jpg" />
       </div>
@@ -52,21 +49,30 @@
       <div class="page">
         <p>
           Les chroniques des anciens n’en disent point la fin ; et l’ombre plane encore sur le terme de cette bataille. Pourtant, une chose est certaine : Démétria s’évanouit dans les profondeurs du bois, et malgré la sagesse des rois et l’inlassable traque des Elfes, elle demeura introuvable.
-
-Mais son ost ne s’éteignit point. Comme un feu rampant dans la lande, il ravagea campagnes et hameaux, assiégea cités et châteaux. Aucun peuple — ni Nains des montagnes, ni Elfes des bois, ni Hommes des plaines — ne fut épargné. Quel dessein ténébreux guidait Démétria ? Nul ne le sut jamais. Pourtant, dès ce jour, les langues du Noir Parler murmurèrent son nom funeste :
-
+          <br><br>
+          Mais son ost ne s’éteignit point. Comme un feu rampant dans la lande, il ravagea campagnes et hameaux, assiégea cités et châteaux. 
+         
         </p>
         <img src="image/oltiken_2.jpg" />
+      </div>
+       <div class="page-content">
+      <div class="page">
+        <p>
+         
+          <br><br>
+          
+          Aucun peuple — ni Nains des montagnes, ni Elfes des bois, ni Hommes des plaines — ne fut épargné. Quel dessein ténébreux guidait Démétria ? Nul ne le sut jamais. Pourtant, dès ce jour, les langues du Noir Parler murmurèrent son nom funeste.
+        </p>
+        <img src="#" />
       </div>
     </div>
 
     <div class="page-content">
       <div class="page">
-        <h1>Exil’ar’anarcht,<br>Le Fléau des Elfes.</h1>
+        <h1>Exil’ar’anarcht, Le Fléau des Elfes.</h1>
         <img src="image/demetria.png" />
       </div>
     </div>
-
   </div>
 
   <!-- Scripts -->
@@ -75,9 +81,9 @@ Mais son ost ne s’éteignit point. Comme un feu rampant dans la lande, il rava
     const isMobile = window.innerWidth <= 600;
 
     const flipbook = new St.PageFlip(document.getElementById("flipbook"), {
-      width: 600,
-      height: 800,
-      size: isMobile ? "stretch" : "fixed",
+      width: isMobile ? 320 : 600,
+      height: isMobile ? window.innerHeight : 800,
+      size: "stretch",
       minWidth: 315,
       maxWidth: 1000,
       minHeight: 400,
