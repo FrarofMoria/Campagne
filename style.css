@@ -187,11 +187,7 @@ main > img {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100%;
-  padding: 1rem;
-  box-sizing: border-box;
-  overflow: hidden;
+  min-height: 80vh;
 }
 
 .page {
@@ -202,7 +198,7 @@ main > img {
   overflow: hidden;
   background: #1a0f0a url('image/parchment-dark.jpg') no-repeat center center;
   background-size: cover;
-  color: #f0e6d2;
+  color: #000000;
   font-family: 'Cinzel', serif;
   display: flex;
   flex-direction: column;
@@ -273,7 +269,7 @@ main > img {
   background-image: url('image/parchment-dark.jpg'); /* ou autre texture */
   background-size: cover;
   background-color: #1c1510;
-  color: #f4e7d5;
+  color: #1c1510;
   display: flex;
   flex-direction: column;
   justify-content: center;
