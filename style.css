@@ -319,4 +319,23 @@ main > img {
     margin-top: 1rem;
   }
 }
+#fullscreen-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background: rgba(26, 15, 10, 0.8);
+  color: #e0d4b7;
+  border: 2px solid #5a4322;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 18px;
+  font-family: 'Cinzel', serif;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+  transition: background 0.3s ease;
+}
 
+#fullscreen-btn:hover {
+  background: rgba(90, 67, 34, 0.95);
+}

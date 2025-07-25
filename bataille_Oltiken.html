@@ -13,6 +13,7 @@
   <main>
     <div id="book-container">
       <div id="flipbook"></div>
+      <button id="fullscreen-btn" title="Plein écran 📖">⛶</button>
     </div>
   </main>
 
@@ -107,5 +108,17 @@
       })
       .catch(error => console.error('Erreur chargement header:', error));
   </script>
+  <script>
+  const fullscreenBtn = document.getElementById('fullscreen-btn');
+  fullscreenBtn.addEventListener('click', () => {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch(err => {
+        console.warn(`Erreur plein écran : ${err.message}`);
+      });
+    } else {
+      document.exitFullscreen();
+    }
+  });
+</script>
 </body>
 </html>
